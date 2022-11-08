@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>User Creation</title>
+    </head>
+    <body onload="get()">
+        <form id="form" class="container is-max-desktop">
+            <div class="is-fluid" id="form">
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal is-large">
+                        <label class="label">Full Name:</label>
+                    </div>
+                    <div class="field-body is-8">
+                        <input class="field-body input is-medium" id="name" onfocusout="nameCheck()" placeholder="" type="text" />
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal is-large">
+                        <label class="label">Email:</label>
+                    </div>
+                    <div class="field-body">
+                        <input class="field-body input is-medium" id="email" onfocusout="emailCheck()" placeholder="" type="email" />
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal is-large">
+                        <label class="label">Password:</label>
+                    </div>
+                    <div class="field-body">
+                        <input class="field-body input is-medium" onfocusout="passwordCheck()" id="password" type="password" />
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal is-large">
+                        <label class="label">Occupation:</label>
+                    </div>
+                    <div class="field-body is-large">
+                        <div class="select is-medium">
+                            <select id="job" name="job"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label is-normal is-large">
+                        <label class="label">States:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="select is-medium">
+                            <select id="state" name="state"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <!-- Left empty for spacing -->
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <button id="submit" onclick="submit()" class="button is-primary is-medium">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+    <script src="script.js"></script>
+</html>
